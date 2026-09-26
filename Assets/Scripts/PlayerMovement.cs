@@ -132,8 +132,6 @@ public class PlayerMovement : MonoBehaviour
             rb.mass = 0.5f;
     }
 
-
-
     private void ResetJump()
     {
         readyToJump = true;
