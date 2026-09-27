@@ -1654,9 +1654,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   weldingPoint: {fileID: 1696921940}
-  weldingTarget: {fileID: 590450086}
-  sphereRadius: 0.3
-  sphereCastDistance: 10
+  weldingTarget: {fileID: 0}
   weldingParticles: {fileID: 1994810645}
 --- !u!1 &432432459
 GameObject:
@@ -1834,7 +1832,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeldingPoint
   life: 100
   currentLife: 0
-  isBeingWeld: 0
 --- !u!1 &620989379
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,7 +2004,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeldingPoint
   life: 100
   currentLife: 0
-  isBeingWeld: 0
 --- !u!1 &807533820
 GameObject:
   m_ObjectHideFlags: 0
@@ -2522,7 +2518,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeldingPoint
   life: 100
   currentLife: 0
-  isBeingWeld: 0
 --- !u!1 &1189528319
 GameObject:
   m_ObjectHideFlags: 0
@@ -3113,7 +3108,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeldingPoint
   life: 100
   currentLife: 0
-  isBeingWeld: 0
 --- !u!1 &1823688464
 GameObject:
   m_ObjectHideFlags: 0

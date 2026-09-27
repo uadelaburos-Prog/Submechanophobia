@@ -10,14 +10,18 @@ public class WeldingTool : MonoBehaviour
     [SerializeField] private WeldingPoint weldingTarget;
 
     private RaycastHit hit;
+    private bool isActive;
 
     //obtener los objectos necesarios para los efectos de soldadura
     [SerializeField] private ParticleSystem weldingParticles;
 
+    private void Awake()
+    {
+        weldingParticles.gameObject.SetActive(false);
+    }
+
     private void Update()
     {
-        bool isActive = false;
-
         if (Input.GetKey(KeyCode.Mouse0))
         {
             Vector3 direction = cam.transform.forward;
@@ -26,16 +30,13 @@ public class WeldingTool : MonoBehaviour
 
             if (gotHit)
             {
+                isActive = true;
                 weldingTarget = hit.collider.gameObject.GetComponent<WeldingPoint>();
+                if (weldingTarget == null) return;
                 weldingTarget.IsBeingWeld();
                 
                 Debug.Log($"El raycast golpeó a: {hit.collider.gameObject.name}");
             }
-        }
-
-        if (weldingTarget.Currentlife <= 100)
-        {
-            isActive = true;
         }
         else
             isActive = false;
