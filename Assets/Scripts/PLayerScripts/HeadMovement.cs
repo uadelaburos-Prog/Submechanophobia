@@ -31,8 +31,6 @@ public class HeadMovement : MonoBehaviour
             _camera.localPosition = _startPos + FootStepMotion();
         else
             _camera.localPosition = Vector3.Lerp(_camera.localPosition, _startPos, _returnSpeed * Time.deltaTime);
-
-        _camera.LookAt(FocusTarget());
     }
 
     private bool IsWalking()
@@ -48,10 +46,5 @@ public class HeadMovement : MonoBehaviour
             Mathf.Cos(t * 0.5f) * _amplitude * 2f,
             Mathf.Sin(t) * _amplitude,
             0f);
-    }
-
-    private Vector3 FocusTarget()
-    {
-        return _cameraHolder.position + _cameraHolder.forward * 15f;
     }
 }

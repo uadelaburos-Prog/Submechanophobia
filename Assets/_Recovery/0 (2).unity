@@ -646,7 +646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &72615603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1648,16 +1648,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9fabb86b7b6f0940a490a96d61e47c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeldingTool
-  cam: {fileID: 1823688466}
-  raycastDistance: 5
+  welderNose: {fileID: 1217176999}
+  raycastDistance: 10
   canBeWeld:
     serializedVersion: 2
     m_Bits: 64
-  weldingPoint: {fileID: 1696921940}
-  weldingTarget: {fileID: 590450086}
-  sphereRadius: 0.3
-  sphereCastDistance: 10
-  weldingParticles: {fileID: 1994810645}
+  particleSystem: {fileID: 1994810645}
+  changeOutline: 0
 --- !u!1 &432432459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1716,11 +1713,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 590450085}
-  - component: {fileID: 590450086}
   - component: {fileID: 590450084}
   - component: {fileID: 590450083}
   - component: {fileID: 590450082}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1774,6 +1770,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: fefe98a261706724eb35458971414503, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1820,21 +1817,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &590450086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590450081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f4daa8b90887cd4689e3024c4714820, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WeldingPoint
-  life: 100
-  currentLife: 0
-  isBeingWeld: 0
 --- !u!1 &620989379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1889,11 +1871,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 791622833}
-  - component: {fileID: 791622834}
   - component: {fileID: 791622832}
   - component: {fileID: 791622831}
   - component: {fileID: 791622830}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1947,6 +1928,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: fefe98a261706724eb35458971414503, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1993,21 +1975,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &791622834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791622829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f4daa8b90887cd4689e3024c4714820, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WeldingPoint
-  life: 100
-  currentLife: 0
-  isBeingWeld: 0
 --- !u!1 &807533820
 GameObject:
   m_ObjectHideFlags: 0
@@ -2093,7 +2060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &880382614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2338,7 +2305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 478ce4b144363bf488ef8e1c3e503fd2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.24170351
+      value: 0.24170303
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 478ce4b144363bf488ef8e1c3e503fd2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2346,23 +2313,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 478ce4b144363bf488ef8e1c3e503fd2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5470331
+      value: 0.5470332
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 478ce4b144363bf488ef8e1c3e503fd2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.4999998
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 478ce4b144363bf488ef8e1c3e503fd2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.4999998
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 478ce4b144363bf488ef8e1c3e503fd2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.50000024
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 478ce4b144363bf488ef8e1c3e503fd2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.50000024
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 478ce4b144363bf488ef8e1c3e503fd2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2370,11 +2337,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 478ce4b144363bf488ef8e1c3e503fd2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 478ce4b144363bf488ef8e1c3e503fd2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 478ce4b144363bf488ef8e1c3e503fd2, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -2390,6 +2357,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 478ce4b144363bf488ef8e1c3e503fd2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1994810646}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 478ce4b144363bf488ef8e1c3e503fd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1217176999}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 478ce4b144363bf488ef8e1c3e503fd2, type: 3}
       insertIndex: -1
@@ -2404,11 +2374,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1187872799}
-  - component: {fileID: 1187872800}
   - component: {fileID: 1187872798}
   - component: {fileID: 1187872797}
   - component: {fileID: 1187872796}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2462,6 +2431,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: fefe98a261706724eb35458971414503, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2508,21 +2478,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1187872800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187872795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f4daa8b90887cd4689e3024c4714820, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WeldingPoint
-  life: 100
-  currentLife: 0
-  isBeingWeld: 0
 --- !u!1 &1189528319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2554,6 +2509,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 240510110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1217176998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1217176999}
+  m_Layer: 0
+  m_Name: WelderNose
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1217176999
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217176998}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.31730464, z: 0, w: 0.94832367}
+  m_LocalPosition: {x: 0.020000005, y: 0, z: 0.030000005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 386869143}
+  m_LocalEulerAnglesHint: {x: 0, y: -37, z: 0}
 --- !u!1 &1456897768
 GameObject:
   m_ObjectHideFlags: 0
@@ -2765,7 +2751,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 32
+    m_Bits: 96
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2955,37 +2941,6 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
---- !u!1 &1696921939
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1696921940}
-  m_Layer: 0
-  m_Name: WeldingPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1696921940
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1696921939}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1823688467}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1717972526
 GameObject:
   m_ObjectHideFlags: 0
@@ -2995,7 +2950,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1717972530}
-  - component: {fileID: 1717972531}
   - component: {fileID: 1717972529}
   - component: {fileID: 1717972528}
   - component: {fileID: 1717972527}
@@ -3053,6 +3007,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: fefe98a261706724eb35458971414503, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3099,21 +3054,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1717972531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1717972526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f4daa8b90887cd4689e3024c4714820, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WeldingPoint
-  life: 100
-  currentLife: 0
-  isBeingWeld: 0
 --- !u!1 &1823688464
 GameObject:
   m_ObjectHideFlags: 0
@@ -3209,7 +3149,6 @@ Transform:
   - {fileID: 1456897769}
   - {fileID: 30849793}
   - {fileID: 386869143}
-  - {fileID: 1696921940}
   m_Father: {fileID: 1857225453}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1823688468
@@ -3415,7 +3354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1864037188
 MonoBehaviour:
   m_ObjectHideFlags: 0
